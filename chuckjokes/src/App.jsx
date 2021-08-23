@@ -1,7 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import './App.css';
-import { RandomJoke } from './components/RandomJoke/RandomJoke';
-import { CategoryJoke } from './components/CategoryJoke/index';
+import { CategoryJoke, RandomJoke} from './components';
 import axios from 'axios';
 
 function App() {

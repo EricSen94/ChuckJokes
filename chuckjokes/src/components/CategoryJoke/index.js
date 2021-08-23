@@ -1,1 +1,0 @@
-export {CategoryJoke} from './CategoryJoke'
