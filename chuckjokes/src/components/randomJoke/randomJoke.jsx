@@ -1,9 +1,10 @@
 import React from 'react'
 import './randomJoke.css'
+import axios from 'axios';
 
 export function RandomJoke({showJoke}) {
     const getJoke = () =>{
-        fetch('https://api.chucknorris.io/jokes/random')
+        axios.get('https://api.chucknorris.io/jokes/random')
         .then(async response => {
             const data = await response.json();
             showJoke(data.value)
