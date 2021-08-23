@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react';
-import { TypeJokeList } from '../TypeJokeList/TypeJokeList'
-import './TypeJoke.css'
+import { CategoryJokeList } from './CategoryJokeList'
+import './CategoryJoke.css'
 
-export function TypeJoke({categories, onButtonClick}) {
+export function CategoryJoke({categories, onButtonClick}) {
+
     return (
         <Fragment>
             <div>
                 <p>Categories</p>
                 {
                 categories.map((cat) =>
-                    <TypeJokeList item={cat.value} onButtonClick={onButtonClick} />
+                    <CategoryJokeList item={cat.value} onButtonClick={onButtonClick} />
                 )}
             </div>
         </Fragment>

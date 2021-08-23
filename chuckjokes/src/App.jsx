@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import './App.css';
 import { RandomJoke } from './components/RandomJoke/RandomJoke';
-import { TypeJoke } from './components/TypeJoke/TypeJoke';
+import { CategoryJoke } from './components/CategoryJoke/index';
 import axios from 'axios';
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
             </p>
           </div>
           <RandomJoke onButtonClick={onButtonClick}/>
-          <TypeJoke categories={categories} onButtonClick={onButtonClick}/>
+          <CategoryJoke categories={categories} onButtonClick={onButtonClick}/>
         </header>
       </div>
     </Fragment>

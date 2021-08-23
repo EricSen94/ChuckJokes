@@ -1,9 +1,9 @@
 import React from 'react'
-import './TypeJokeList.css'
+import './CategoryJokeList.css'
 import axios from 'axios';
 
 
-export function TypeJokeList({item, onButtonClick}) {
+export function CategoryJokeList({item, onButtonClick}) {
     const getJoke = ()=>{
         axios.get("https://api.chucknorris.io/jokes/random?category="+item)
         .then(async response => {
