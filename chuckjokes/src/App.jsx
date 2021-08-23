@@ -1,14 +1,14 @@
-import React, { useState, Fragment, useRef, useEffect } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import './App.css';
-import { RandomJoke } from './components/randomJoke/randomJoke';
-import { TypeJoke } from './components/typeJoke/typeJoke';
+import { RandomJoke } from './components/RandomJoke/RandomJoke';
+import { TypeJoke } from './components/TypeJoke/TypeJoke';
 import axios from 'axios';
 
 function App() {
   const [jokes, setJokes ] = useState({
     joke: 'Select a category for a great joke, o just a random with the buttons.'
   });
-  const showJoke = (joke) =>{
+  const onButtonClick = (joke) =>{
     console.log(joke)
     setJokes({joke:joke})
   }
@@ -32,8 +32,8 @@ function App() {
             {jokes.joke}
             </p>
           </div>
-          <RandomJoke showJoke={showJoke}/>
-          <TypeJoke categories={categories} showJoke={showJoke}/>
+          <RandomJoke onButtonClick={onButtonClick}/>
+          <TypeJoke categories={categories} onButtonClick={onButtonClick}/>
         </header>
       </div>
     </Fragment>
