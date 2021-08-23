@@ -1,4 +1,7 @@
-.style{
+.styleRandom{
     background-color: beige;
-    width: min-content;
+    margin-top: 10%;
+    height: 35px;
+    border-radius: 14px;
+    width: 130px;
 }

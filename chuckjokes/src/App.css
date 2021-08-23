@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.joke{
+  max-width: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+.jokeDiv{
+  max-width: 90%;
+  height: fit-content;
+  border-radius: 14px;
+  border: solid 1px;
+}

@@ -14,10 +14,13 @@ export function TypeJoke({categories, showJoke}) {
       }
     return (
         <Fragment>
-            {
-            categories.map((cat) =>
-                <TypeJokeList item={cat.value} showJoke={showJoke} />
-            )}
+            <div>
+                <p>Categories</p>
+                {
+                categories.map((cat) =>
+                    <TypeJokeList item={cat.value} showJoke={showJoke} />
+                )}
+            </div>
         </Fragment>
     )
 }

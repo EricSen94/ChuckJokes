@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function App() {
   const [jokes, setJokes ] = useState({
-    joke: ''
+    joke: 'Select a category for a great joke, o just a random with the buttons.'
   });
   const showJoke = (joke) =>{
     console.log(joke)
@@ -27,9 +27,11 @@ function App() {
     <Fragment>
       <div className="App">
         <header className="App-header">
-          <p>
-          {jokes.joke}
-          </p>
+          <div className="jokeDiv">
+            <p className="joke">
+            {jokes.joke}
+            </p>
+          </div>
           <RandomJoke showJoke={showJoke}/>
           <TypeJoke categories={categories} showJoke={showJoke}/>
         </header>

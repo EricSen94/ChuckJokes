@@ -6,13 +6,13 @@ export function RandomJoke({showJoke}) {
     const getJoke = () =>{
         axios.get('https://api.chucknorris.io/jokes/random')
         .then(async response => {
-            const data = await response.json();
+            const data = await response.data;
             showJoke(data.value)
         })
     }
     return (
         <div>
-            <button className="style" onClick={getJoke}>Random Joke</button>
+            <button className="styleRandom" onClick={getJoke}>Random Joke</button>
         </div>
     )
 }
